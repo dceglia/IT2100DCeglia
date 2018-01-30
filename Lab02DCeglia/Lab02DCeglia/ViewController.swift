@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         myMessage.text="Hello Xcode"
         view.addSubview(myMessage)
         NSLog("Hello Xcode, Again")
+        NSLog("Hello github!")
     }
 
     override func didReceiveMemoryWarning() {
