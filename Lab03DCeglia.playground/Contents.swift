@@ -31,14 +31,29 @@ class Counter {
     }
     
     //func decrement() {
-        
+    // for i in 1 ... 4 {
+            // function()
+    // }
     //}
+    
+    // parameter with argument label and parameter name
+    func increment(by amount: Int) {
+        count += i
+    }
     
     func reset() {
         count = 0
     }
+    
+    func getCount() {
+        return self
+    }
 
 }
+
+// ********************** //
+//         FIVE           //
+// ********************** //
 
 func combineAll(numbers: [Int], starter: String) -> String {
     var numbersCombined = starter + ": "
