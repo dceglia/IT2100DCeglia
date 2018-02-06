@@ -30,11 +30,11 @@ class Counter {
         count -= 1
     }
     
-    //func decrement() {
-    // for i in 1 ... 4 {
-            // function()
-    // }
-    //}
+    func decrement(amount: Int) {
+        for i in 1...amount {
+            count = count + 1
+        }
+    }
     
     // parameter with argument label and parameter name
     func increment(by amount: Int) {
@@ -46,7 +46,7 @@ class Counter {
     }
     
     func getCount() {
-        return self
+        self.count
     }
 
 }
