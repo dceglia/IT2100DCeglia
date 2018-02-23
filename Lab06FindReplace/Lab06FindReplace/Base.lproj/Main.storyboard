@@ -61,11 +61,19 @@
                                 <state key="normal" title="Find/Replace" backgroundImage="blueButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="findReplaceOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJV-ix-myg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="findField" destination="pEA-N1-XAM" id="ysf-LX-Pp6"/>
+                        <outlet property="replaceField" destination="h61-RY-dmY" id="9C0-5G-7eZ"/>
+                        <outlet property="textViewBox" destination="Usn-e4-o9q" id="U3k-bL-sxm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
