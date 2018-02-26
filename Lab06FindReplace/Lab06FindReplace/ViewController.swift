@@ -17,9 +17,8 @@ class ViewController: UIViewController {
     ////////     Option 1     ///////
     
     @IBAction func findReplaceOperation(_ sender: Any) {
-        textViewBox.text! = replaceField.text!
-        textViewBox.text! = replaceField.text.stringByReplacingOccurrencesOfString!(withString: replaceField.text!)
-
+        textViewBox.text! = textViewBox.text.replacingOccurrences(of: findField.text!, with: replaceField.text!)
+    }
         ///////    Option 2     ////////
         
 //    @IBAction func findReplaceOperation() {
