@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var sliderValue: UISlider!
+    @IBOutlet weak var stepperValue: UIStepper!
+    @IBOutlet weak var sliderOutput: UILabel!
+    @IBOutlet weak var stepperOutput: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
