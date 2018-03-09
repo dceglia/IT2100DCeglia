@@ -18,13 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opd-ei-nYv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coniferous bkgd" translatesAutoresizingMaskIntoConstraints="NO" id="opd-ei-nYv">
                                 <rect key="frame" x="16" y="20" width="288" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hq6-u0-100">
                                 <rect key="frame" x="101" y="243" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setSpeed:" destination="BYZ-38-t0r" eventType="valueChanged" id="8a5-st-HG0"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stepper:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2r-Mp-WiD">
                                 <rect key="frame" x="103" y="370" width="114" height="21"/>
@@ -36,6 +39,9 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2030" minimumValue="1900" maximumValue="2030" translatesAutoresizingMaskIntoConstraints="NO" id="Svb-2u-ObC">
                                 <rect key="frame" x="113" y="333" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="incrementSpeed:" destination="BYZ-38-t0r" eventType="valueChanged" id="0f8-9H-Sd9"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slider:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clg-pC-dmg">
                                 <rect key="frame" x="126" y="280" width="69" height="21"/>
@@ -44,6 +50,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turkey 1" translatesAutoresizingMaskIntoConstraints="NO" id="Z2r-93-0Y9">
+                                <rect key="frame" x="120" y="136" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turkey 3" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-xd-sIh">
+                                <rect key="frame" x="253" y="55" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turkey 4" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-mN-ui1">
+                                <rect key="frame" x="23" y="55" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turkey 5" translatesAutoresizingMaskIntoConstraints="NO" id="HAP-GY-odz">
+                                <rect key="frame" x="52" y="103" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-bX-l7m">
+                                <rect key="frame" x="113" y="423" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="toggleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HdR-oN-URK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turkey 2" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-dr-aDv">
+                                <rect key="frame" x="208" y="103" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -53,6 +87,11 @@
                         <outlet property="sliderValue" destination="hq6-u0-100" id="l9U-eI-Rfk"/>
                         <outlet property="stepperOutput" destination="F2r-Mp-WiD" id="7RB-5D-FZd"/>
                         <outlet property="stepperValue" destination="Svb-2u-ObC" id="WHp-rw-yu8"/>
+                        <outlet property="turkeyView1" destination="Z2r-93-0Y9" id="etE-VN-g3x"/>
+                        <outlet property="turkeyView2" destination="TIe-dr-aDv" id="EYh-Qr-hnp"/>
+                        <outlet property="turkeyView3" destination="mTv-xd-sIh" id="OMi-ZC-GgK"/>
+                        <outlet property="turkeyView4" destination="HAP-GY-odz" id="eFf-3g-mnI"/>
+                        <outlet property="turkeyView5" destination="3Pv-mN-ui1" id="6if-z5-d77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,4 +99,12 @@
             <point key="canvasLocation" x="136.875" y="133.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coniferous bkgd" width="852" height="480"/>
+        <image name="turkey 1" width="225" height="225"/>
+        <image name="turkey 2" width="225" height="225"/>
+        <image name="turkey 3" width="225" height="225"/>
+        <image name="turkey 4" width="225" height="225"/>
+        <image name="turkey 5" width="225" height="225"/>
+    </resources>
 </document>
