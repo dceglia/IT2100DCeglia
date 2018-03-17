@@ -69,7 +69,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-bX-l7m">
                                 <rect key="frame" x="113" y="423" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Gobble!"/>
                                 <connections>
                                     <action selector="toggleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HdR-oN-URK"/>
                                 </connections>

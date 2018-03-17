@@ -21,11 +21,45 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderOutput: UILabel!
     @IBOutlet weak var stepperOutput: UILabel!
     
-    @IBAction func toggleAnimation(_ sender: Any) {
+    @IBAction func toggleAnimation(_ sender: AnyObject) {
+        if (turkeyView1.isAnimation()) {
+            turkeyView1.stopAnimating()
+            turkeyView2.stopAnimating()
+            turkeyView3.stopAnimating()
+            turkeyView4.stopAnimating()
+            turkeyView5.stopAnimating()
+            toggleButton.setTitle("Gobble!", forState: UIControlState.Normal)
+        } else {
+            turkeyView1.startAnimating()
+            turkeyView2.startAnimating()
+            turkeyView3.startAnimating()
+            turkeyView4.startAnimating()
+            turkeyView5.startAnimating()
+            toggleButton.setTitle("Sit Still!", forState: UIControlState.Normal)
+        }
     }
-    @IBAction func setSpeed(_ sender: Any) {
+    @IBAction func setSpeed(_ sender: AnyObject?) {
+        turkeyView1.animationDuration=TimeInterval(2.0-sliderValue.value)
+        turkeyView2.animationDuration=turkeyView1.animationDuration+TimeInterval(arc4random_uniform(10))/10
+        turkeyView3.animationDuration=turkeyView1.animationDuration+TimeInterval(arc4random_uniform(10))/10
+        turkeyView4.animationDuration=turkeyView1.animationDuration+TimeInterval(arc4random_uniform(10))/10
+        turkeyView5.animationDuration=turkeyView1.animationDuration+TimeInterval(arc4random_uniform(10))/10
+
+        turkeyView1.startAnimating()
+        turkeyView2.startAnimating()
+        turkeyView3.startAnimating()
+        turkeyView4.startAnimating()
+        turkeyView5.startAnimating()
+        
+        toggleButton.setTitle("Sit Still!", forState: UIControlState.Normal)
+        
+        let gobbleRateString=String(format: "%1.2f gps", 1/(2-self.sliderValue.value))
+        gobblesPerSecond.text=gobbleRateString
     }
+    
     @IBAction func incrementSpeed(_ sender: Any) {
+        sliderValue.value=Float(stepperValue.value)
+        setSpeed(nil)
     }
     
     override func viewDidLoad() {
