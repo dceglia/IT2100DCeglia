@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var webApple: WKWebView!
+    @IBOutlet weak var appleLink: UISegmentedControl!
+    @IBAction func changeAppleLink(_ sender: Any) {
+        var appleURLString = ""
+        switch appleLink.selectedSegmentIndex {
+        case 0:
+            appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
+        default:
+            appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
+        }
+        let myURL = URL(string: appleURLString)
+        let myRequest = URLRequest(url: myURL!)
+        webApple.load(myRequest)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let myURL = URL(string: "https://en.wikipedia.org/wiki/Apple_Inc.")
+        let myRequest = URLRequest(url: myURL!)
+        webApple.load(myRequest)
     }
 
     override func didReceiveMemoryWarning() {
