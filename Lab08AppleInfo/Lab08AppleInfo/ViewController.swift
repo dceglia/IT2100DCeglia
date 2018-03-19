@@ -20,30 +20,16 @@ class ViewController: UIViewController {
         switch appleLink.selectedSegmentIndex {
         case 0:
             appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
+        case 1:
+            appleURLString = "https://en.wikipedia.org/wiki/IOS"
+        case 2:
+            appleURLString = "https://en.wikipedia.org/wiki/Xcode"
+        case 3:
+            appleURLString = "https://en.wikipedia.org/wiki/Swift_(programming_language)"
         default:
             appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
         }
         
-        switch appleLink.selectedSegmentIndex {
-        case 1:
-            appleURLString = "https://en.wikipedia.org/wiki/IOS"
-        default:
-            appleURLString = "https://en.wikipedia.org/wiki/IOS"
-        }
-        
-        switch appleLink.selectedSegmentIndex {
-        case 2:
-            appleURLString = "https://en.wikipedia.org/wiki/Xcode"
-        default:
-            appleURLString = "https://en.wikipedia.org/wiki/Xcode"
-        }
-        
-        switch appleLink.selectedSegmentIndex {
-        case 3:
-            appleURLString = "https://en.wikipedia.org/wiki/Swift_(programming_language)"
-        default:
-            appleURLString = "https://en.wikipedia.org/wiki/Swift_(programming_language)"
-        }
         
         let myURL = URL(string: appleURLString)
         let myRequest = URLRequest(url: myURL!)
