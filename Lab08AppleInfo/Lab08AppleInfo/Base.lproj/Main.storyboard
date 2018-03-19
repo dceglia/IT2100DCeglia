@@ -38,8 +38,8 @@
                                     <action selector="changeAppleLink:" destination="BYZ-38-t0r" eventType="valueChanged" id="CP7-Md-S4E"/>
                                 </connections>
                             </segmentedControl>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4Q-ke-MwI">
-                                <rect key="frame" x="32" y="79" width="248" height="381"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9kJ-CE-vDD">
+                                <rect key="frame" x="36" y="86" width="240" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -53,8 +53,7 @@
                     </view>
                     <connections>
                         <outlet property="appleLink" destination="HyX-t8-dow" id="Ewd-IX-hIh"/>
-                        <outlet property="asdf" destination="C4Q-ke-MwI" id="xSw-eZ-JYo"/>
-                        <outlet property="webApple" destination="C4Q-ke-MwI" id="4ce-wX-QK8"/>
+                        <outlet property="webApple" destination="9kJ-CE-vDD" id="mc8-Cs-Wbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

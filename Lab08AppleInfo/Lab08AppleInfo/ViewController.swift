@@ -11,16 +11,40 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var webApple: WKWebView!
+    @IBOutlet weak var webApple: WKWebView!    
     @IBOutlet weak var appleLink: UISegmentedControl!
     @IBAction func changeAppleLink(_ sender: Any) {
+        
         var appleURLString = ""
+        
         switch appleLink.selectedSegmentIndex {
         case 0:
             appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
         default:
             appleURLString = "https://en.wikipedia.org/wiki/Apple_Inc."
         }
+        
+        switch appleLink.selectedSegmentIndex {
+        case 1:
+            appleURLString = "https://en.wikipedia.org/wiki/IOS"
+        default:
+            appleURLString = "https://en.wikipedia.org/wiki/IOS"
+        }
+        
+        switch appleLink.selectedSegmentIndex {
+        case 2:
+            appleURLString = "https://en.wikipedia.org/wiki/Xcode"
+        default:
+            appleURLString = "https://en.wikipedia.org/wiki/Xcode"
+        }
+        
+        switch appleLink.selectedSegmentIndex {
+        case 3:
+            appleURLString = "https://en.wikipedia.org/wiki/Swift_(programming_language)"
+        default:
+            appleURLString = "https://en.wikipedia.org/wiki/Swift_(programming_language)"
+        }
+        
         let myURL = URL(string: appleURLString)
         let myRequest = URLRequest(url: myURL!)
         webApple.load(myRequest)
