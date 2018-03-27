@@ -17,13 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedAction: UITextView!
     
     @IBAction func showAlertWithFields(_ sender: Any) {
-        let alertController = UIAlertController(title: "Enter Name and Email", message: "Please enter your name and e-mail.", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Enter Name and Email",
+            message: "Please enter your name and e-mail.",
+            preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addTextField(configurationHandler: {(textField: UITextField) in textField.placeholder="Name"
-        })
+        alertController.addTextField(configurationHandler: {(textField: UITextField) in
+            textField.placeholder="Name"})
         
-        alertController.addTextField(configurationHandler: {(textField: UITextField) in textField.placeholder="Email Address"
-        })
+        alertController.addTextField(configurationHandler: {(textField: UITextField) in
+            textField.placeholder="Email Address"})
         
         let submitAction = UIAlertAction(title: "OK",
             style: UIAlertActionStyle.default,
@@ -31,8 +33,7 @@ class ViewController: UIViewController {
                 let emailAddress: String = alertController.textFields![0].text!
                 let name: String = alertController.textFields![0].text!
                 self.userEmail.text="Entered '\(emailAddress)'"
-                self.userName.text="Entered '\(name)'"
-        })
+                self.userName.text="Entered '\(name)'"})
         
         alertController.addAction(submitAction)
         present(alertController, animated: true, completion: nil)
@@ -44,7 +45,9 @@ class ViewController: UIViewController {
     /////////////////////////////
     
     @IBAction func showAlertWithOptions(_ sender: Any) {
-        let alertController = UIAlertController(title: "Alert with Buttons Selected", message: "This alert allows multiple actions", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Alert with Buttons Selected",
+            message: "This alert allows multiple actions",
+            preferredStyle: UIAlertControllerStyle.alert)
         
         let cSharp = UIAlertAction(title: "C#",
                 style: UIAlertActionStyle.default,
@@ -73,7 +76,36 @@ class ViewController: UIViewController {
     ////////// 3 //////////////
     ///////////////////////////
     
+    @IBAction func showActionSheet(_ sender: Any) {
+        let alertController = UIAlertController(title: "Action Sheet",
+            message: "Submit a follow-up",
+            preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let sendInfo = UIAlertAction(title: "Send Information",
+                style: UIAlertActionStyle.default,
+                handler: {(alertAction: UIAlertAction) in
+                    self.userOutput.text="Thank you! We will send information about " +
+                        self.selectedAction.text!})
+        
+        let noSendInfo = UIAlertAction(title: "Do not send Information",
+                style: UIAlertActionStyle.default,
+                handler: {(alertAction: UIAlertAction) in
+                    self.selectedAction.text="Thank you!"})
+        
+        let cancel = UIAlertAction(title: "Cancel",
+                style: UIAlertActionStyle.cancel,
+                handler: {(alertAction: UIAlertAction) in
+                    self.selectedAction.text="Pressed Cancel"})
+        
+        alertController.addAction(sendInfo)
+        alertController.addAction(noSendInfo)
+        alertController.addAction(cancel)
+        
+        present(alertController, animated: true, completion: nil)
+        
+    }
     
+///////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
