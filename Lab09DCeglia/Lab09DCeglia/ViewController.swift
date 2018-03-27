@@ -23,42 +23,57 @@ class ViewController: UIViewController {
         })
         
         alertController.addTextField(configurationHandler: {(textField: UITextField) in textField.placeholder="Email Address"
-            textField.keyboardType=UIKeyboardType.emailAddress
         })
         
-//        let emailAction, nameAction = UIAlertAction(title: "OK",
-//            style: UIAlertActionStyle.default,
-//            handler: {(alertAction: UIAlertAction) in
-//                let emailAddress: String = alertController.textFields![0].text!
-//                let name: String = alertController.textFields![0].text!
-//                self.userEmail.text="Entered '\(emailAddress)'"
-//                self.userName.text="Entered '\(name)'"
-
-//        })
+        let submitAction = UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.default,
+            handler: {(alertAction: UIAlertAction) in
+                let emailAddress: String = alertController.textFields![0].text!
+                let name: String = alertController.textFields![0].text!
+                self.userEmail.text="Entered '\(emailAddress)'"
+                self.userName.text="Entered '\(name)'"
+        })
         
-//        alertController.addAction(emailAction)
-//        alertController.addAction(nameAction)
+        alertController.addAction(submitAction)
         present(alertController, animated: true, completion: nil)
+        
     }
-/////////////////////////////
-//////////// 2 //////////////
-/////////////////////////////
+    
+    /////////////////////////////
+    //////////// 2 //////////////
+    /////////////////////////////
     
     @IBAction func showAlertWithOptions(_ sender: Any) {
         let alertController = UIAlertController(title: "Alert with Buttons Selected", message: "This alert allows multiple actions", preferredStyle: UIAlertControllerStyle.alert)
         
-        let cSharp = UIAlertAction(title: "C#", style: UIAlertActionStyle.default, handler: {(alertAction: UIAlertAction) in self.userOutput.text="C# selected"})
+        let cSharp = UIAlertAction(title: "C#",
+                style: UIAlertActionStyle.default,
+                handler: {(alertAction: UIAlertAction) in
+                    self.favoriteLanguage.text="C# selected"})
         
-        let java = UIAlertAction(title: "Java", style: UIAlertActionStyle.default, handler: {(alertAction: UIAlertAction) in self.userOutput.text="Java selected"})
+        let java = UIAlertAction(title: "Java",
+                style: UIAlertActionStyle.default,
+                handler: {(alertAction: UIAlertAction) in
+                    self.favoriteLanguage.text="Java selected"})
         
-        let swift = UIAlertAction(title: "Swift", style: UIAlertActionStyle.default, handler: {(alertAction: UIAlertAction) in self.userOutput.text="Swift selected"})
+        let swift = UIAlertAction(title: "Swift",
+                style: UIAlertActionStyle.default,
+                handler: {(alertAction: UIAlertAction) in
+                    self.favoriteLanguage.text="Swift selected"})
         
         alertController.addAction(cSharp)
         alertController.addAction(java)
         alertController.addAction(swift)
         
+        self.present(alertController, animated: true, completion: nil)
+        
     }
-//////////////////////////////
+    
+    ///////////////////////////
+    ////////// 3 //////////////
+    ///////////////////////////
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,4 +87,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
