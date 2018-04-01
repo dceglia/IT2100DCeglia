@@ -9,7 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameField: UITextField!
+    
+//    @IBAction func updateLabel(_ sender: Any) {
+//
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        nameField.text = (presentingViewController as! Scene2ViewController).nameLabel.text
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
