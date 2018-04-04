@@ -1,17 +1,15 @@
 //
 //  Scene2ViewController.swift
-//  Lab10-MultipleScenes
+//  Lab10MultipleScenes
 //
-//  Created by David Ceglia on 3/31/18.
+//  Created by David Ceglia on 4/4/18.
 //  Copyright © 2018 David Ceglia. All rights reserved.
 //
 
 import UIKit
 
 class Scene2ViewController: UIViewController {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
