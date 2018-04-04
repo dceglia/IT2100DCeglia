@@ -9,7 +9,10 @@
 import UIKit
 
 class Scene2ViewController: UIViewController {
-
+    
+    @IBOutlet weak var scene2Label: UILabel!
+    @IBOutlet weak var scene2OutputLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
