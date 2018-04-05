@@ -92,9 +92,11 @@
                     <connections>
                         <outlet property="scene2Label" destination="4ts-CG-iqm" id="JRj-Pf-YZ3"/>
                         <outlet property="scene2OutputLabel" destination="Lbw-8x-1EB" id="ATv-RD-i8Q"/>
+                        <segue destination="ZpC-33-NNJ" kind="unwind" identifier="unwindSegueToViewController" unwindAction="unwindToViewControllerWithSegue:" id="ayC-Ci-Yur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ZpC-33-NNJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="12" y="133.5832083958021"/>
         </scene>

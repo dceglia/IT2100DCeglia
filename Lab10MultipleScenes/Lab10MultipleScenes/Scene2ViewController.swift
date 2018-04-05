@@ -10,9 +10,10 @@ import UIKit
 
 class Scene2ViewController: UIViewController {
     
-    @IBOutlet weak var scene2Label: UILabel!
-    @IBOutlet weak var scene2OutputLabel: UILabel!
-    
+    @IBAction func goBackToScene1(_ send: Any) {
+        performSegue(withIdentifier: "unwindSegueToViewController", sender: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

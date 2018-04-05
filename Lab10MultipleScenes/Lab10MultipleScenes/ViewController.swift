@@ -9,8 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+//                                              ////
+//  IBOutlets and Actions not allowed to be added...
+//                                              ////
     
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let startingViewController:ViewController = segue.source as! ViewController
+        let destinationViewController:Scene2ViewController = segue.destination as! Scene2ViewController
+    }
     
+    @IBAction func unwindToViewController(segue:UIStoryboardSegue) {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
