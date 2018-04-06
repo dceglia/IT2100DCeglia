@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ez0-4Y-SVO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="pgH-gf-p1S">
             <objects>
-                <viewController id="Ez0-4Y-SVO" sceneMemberID="viewController">
+                <viewController id="Ez0-4Y-SVO" customClass="ViewController" customModule="Lab10MultipleScenes" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SUQ-Ze-qYW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="Ez0-4Y-SVO" eventType="editingDidEndOnExit" id="xqI-DQ-qyn"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhr-qA-pcn">
                                 <rect key="frame" x="16" y="222" width="343" height="34"/>
@@ -45,6 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Go to Scene 2"/>
                                 <connections>
+                                    <action selector="updateNameField:" destination="Ez0-4Y-SVO" eventType="touchUpInside" id="jbJ-hK-MSH"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="7IN-su-xAR"/>
                                 </connections>
                             </button>
@@ -52,15 +56,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8zQ-57-hdB"/>
                     </view>
+                    <connections>
+                        <outlet property="scene1Button" destination="ies-qO-VUV" id="yc8-i5-YRs"/>
+                        <outlet property="scene1Label" destination="Rtf-Hi-9Q4" id="xd7-Fa-XcL"/>
+                        <outlet property="scene1NameLabel" destination="Vhr-qA-pcn" id="bzS-4h-4xF"/>
+                        <outlet property="scene1TextField" destination="ews-ZR-HLc" id="62k-RI-tvn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8V-HS-CBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-786.39999999999998" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-970" y="134"/>
         </scene>
-        <!--View Controller2-->
+        <!--Scene2 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController2" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Scene2ViewController" customModule="Lab10MultipleScenes" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,26 +82,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scene 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ts-CG-iqm">
-                                <rect key="frame" x="16" y="132" width="359" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mx-93-zxh">
                                 <rect key="frame" x="54" y="351" width="267" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Unwind back to Scene 1"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scene 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ts-CG-iqm">
+                                <rect key="frame" x="8" y="131" width="359" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="scene2Label" destination="4ts-CG-iqm" id="JRj-Pf-YZ3"/>
-                        <outlet property="scene2OutputLabel" destination="Lbw-8x-1EB" id="ATv-RD-i8Q"/>
+                        <outlet property="scene2Label" destination="4ts-CG-iqm" id="yor-DN-3uK"/>
+                        <outlet property="scene2LabelOutput" destination="Lbw-8x-1EB" id="ea0-Cb-B9s"/>
+                        <outlet property="scene2UnwindButton" destination="1Mx-93-zxh" id="Wjm-4b-gzm"/>
                         <segue destination="ZpC-33-NNJ" kind="unwind" identifier="unwindSegueToViewController" unwindAction="unwindToViewControllerWithSegue:" id="ayC-Ci-Yur"/>
                     </connections>
                 </viewController>

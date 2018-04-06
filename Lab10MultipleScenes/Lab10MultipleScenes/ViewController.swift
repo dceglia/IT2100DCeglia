@@ -10,19 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//                                              ////
-//  IBOutlets and Actions not allowed to be added...
-//                                              ////
+    @IBOutlet weak var scene1Label: UILabel!
+    @IBOutlet weak var scene1NameLabel: UILabel!
+    @IBOutlet weak var scene1TextField: UITextField!
+    @IBOutlet weak var scene1Button: UIButton!
+    
+    @IBAction func updateNameField(_ send: Any) {
+        (presentedViewController as! Scene2ViewController).scene2LabelOutput.text = scene1TextField.text
+    }
+    
+    @IBAction func hideKeyboard(_ send: Any) {
+        scene1TextField.resignFirstResponder()
+    }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let startingViewController:ViewController = segue.source as! ViewController
-        let destinationViewController:Scene2ViewController = segue.destination as! Scene2ViewController
+        let _:ViewController = segue.source as! ViewController
+        let _:Scene2ViewController = segue.destination as! Scene2ViewController
     }
     
-    @IBAction func unwindToViewController(segue:UIStoryboardSegue) {
-        
-    }
-
+    @IBAction func unwindToViewController(segue:UIStoryboardSegue) { }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
