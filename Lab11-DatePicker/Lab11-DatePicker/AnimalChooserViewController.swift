@@ -10,7 +10,11 @@ import UIKit
 
 class AnimalChooserViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-
+    @IBOutlet weak var scene2Label: UILabel!
+    @IBOutlet weak var scene2Picker: UIPickerView!
+    @IBOutlet weak var scene2Button: UIButton!
+    
+    
     let kComponentCount: Int = 2
     let kAnimalComponent: Int = 0
     let kSoundComponent: Int = 1

@@ -18,34 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Selected" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ss-XO-f3a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Click Below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ss-XO-f3a">
                                 <rect key="frame" x="98" y="179" width="178" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-G7-54d">
+                                <rect key="frame" x="98" y="428" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Click Here"/>
+                                <connections>
+                                    <segue destination="llT-mA-Oy4" kind="presentation" id="JVQ-b3-pRi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="WYS-kk-MZX"/>
-                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="ihB-9c-4kP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ss-XO-f3a" secondAttribute="bottom" constant="377" id="q9D-gq-l9F"/>
-                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wch-2n-jfl"/>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="Iao-gJ-aom"/>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ilg-6I-Jr5"/>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="btx-V5-P5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ss-XO-f3a" secondAttribute="bottom" constant="377" id="fh5-Fk-8Ky"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="L9x-Mm-sdB"/>
-                        <barButtonItem title="Choose an Animal and Sound" id="YZU-4D-tQa">
-                            <connections>
-                                <segue destination="llT-mA-Oy4" kind="presentation" id="jQk-Di-SbU"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fp1-wr-lbI"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="outputLabel" destination="7Ss-XO-f3a" id="sUT-PN-IoN"/>
+                        <outlet property="segueButton" destination="PgL-G7-54d" id="7WT-lN-QD9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,6 +90,7 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="dismissAnimalChooser" destination="llT-mA-Oy4" eventType="touchUpInside" id="GMo-We-RPi"/>
+                                    <action selector="dismissAnimalChooserWithSender:" destination="llT-mA-Oy4" eventType="touchUpInside" id="Idj-bH-vko"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,6 +108,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hdw-l1-mii"/>
                     </view>
+                    <connections>
+                        <outlet property="scene2Button" destination="b7H-e5-VEh" id="Tev-7E-rkk"/>
+                        <outlet property="scene2Label" destination="uxR-w3-0P5" id="MtI-Yr-S72"/>
+                        <outlet property="scene2Picker" destination="pBV-xF-6Xe" id="Asi-Jg-GLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atE-A8-PNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
