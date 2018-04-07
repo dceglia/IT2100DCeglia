@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Initial" customClass="ViewController" customModule="Lab11_DatePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Selected" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ss-XO-f3a">
+                                <rect key="frame" x="98" y="179" width="178" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="WYS-kk-MZX"/>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="ihB-9c-4kP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ss-XO-f3a" secondAttribute="bottom" constant="377" id="q9D-gq-l9F"/>
+                            <constraint firstItem="7Ss-XO-f3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wch-2n-jfl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="L9x-Mm-sdB"/>
+                        <barButtonItem title="Choose an Animal and Sound" id="YZU-4D-tQa">
+                            <connections>
+                                <segue destination="llT-mA-Oy4" kind="presentation" id="jQk-Di-SbU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fp1-wr-lbI"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="outputLabel" destination="7Ss-XO-f3a" id="sUT-PN-IoN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--Animal Chooser-->
+        <scene sceneID="Bgw-vx-YMr">
+            <objects>
+                <viewController id="llT-mA-Oy4" userLabel="Animal Chooser" customClass="AnimalChooserViewController" customModule="Lab11_DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2h1-sU-kAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Pick an Animal and Sound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxR-w3-0P5">
+                                <rect key="frame" x="40" y="20" width="295" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="fR9-xD-fbs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-xF-6Xe">
+                                <rect key="frame" x="0.0" y="98" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="A4i-V6-GMB"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="llT-mA-Oy4" id="5t8-a8-Shx"/>
+                                    <outlet property="delegate" destination="llT-mA-Oy4" id="gI6-4H-4GI"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-e5-VEh">
+                                <rect key="frame" x="128" y="617" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qSF-ZQ-iiX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="dismissAnimalChooser" destination="llT-mA-Oy4" eventType="touchUpInside" id="GMo-We-RPi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pBV-xF-6Xe" firstAttribute="leading" secondItem="2h1-sU-kAk" secondAttribute="leading" id="KPO-4r-Iaf"/>
+                            <constraint firstAttribute="trailing" secondItem="pBV-xF-6Xe" secondAttribute="trailing" id="YjJ-4h-VjP"/>
+                            <constraint firstAttribute="bottom" secondItem="b7H-e5-VEh" secondAttribute="bottom" constant="20" symbolic="YES" id="ZKq-OF-XqQ"/>
+                            <constraint firstItem="uxR-w3-0P5" firstAttribute="leading" secondItem="Hdw-l1-mii" secondAttribute="leading" constant="40" id="a8L-hI-nPb"/>
+                            <constraint firstItem="b7H-e5-VEh" firstAttribute="leading" secondItem="Hdw-l1-mii" secondAttribute="leading" constant="128" id="ilB-Hp-Sbq"/>
+                            <constraint firstItem="pBV-xF-6Xe" firstAttribute="centerX" secondItem="b7H-e5-VEh" secondAttribute="centerX" id="kbt-tz-fkR"/>
+                            <constraint firstItem="uxR-w3-0P5" firstAttribute="top" secondItem="Hdw-l1-mii" secondAttribute="top" id="rda-Bp-GFk"/>
+                            <constraint firstItem="uxR-w3-0P5" firstAttribute="centerX" secondItem="pBV-xF-6Xe" secondAttribute="centerX" id="xff-lZ-dcV"/>
+                            <constraint firstItem="pBV-xF-6Xe" firstAttribute="top" secondItem="uxR-w3-0P5" secondAttribute="bottom" constant="41" id="zkZ-xl-2qt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hdw-l1-mii"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atE-A8-PNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
