@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CAA80F72086F48300D519DF /* CountingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA80F62086F48300D519DF /* CountingNavigationController.swift */; };
+		5CAA80F92086F4E800D519DF /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA80F82086F4E800D519DF /* GenericViewController.swift */; };
 		5CD8EBE82084480600CF13E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8EBE72084480600CF13E8 /* AppDelegate.swift */; };
-		5CD8EBEA2084480600CF13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD8EBE92084480600CF13E8 /* ViewController.swift */; };
 		5CD8EBED2084480600CF13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD8EBEB2084480600CF13E8 /* Main.storyboard */; };
 		5CD8EBEF2084481300CF13E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD8EBEE2084481300CF13E8 /* Assets.xcassets */; };
 		5CD8EBF22084481300CF13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD8EBF02084481300CF13E8 /* LaunchScreen.storyboard */; };
@@ -32,15 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5CD8EBE42084480600CF13E8 /* Lab12-AdvancedStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Lab12-AdvancedStoryboard.app"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboard.app"; sourceTree = "<absolute>"; };
+		5CAA80F32086D50A00D519DF /* Lab12-AdvancedStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Lab12-AdvancedStoryboard.app"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboard.app"; sourceTree = "<absolute>"; };
+		5CAA80F42086D50A00D519DF /* Lab12-AdvancedStoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardTests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardTests.xctest"; sourceTree = "<absolute>"; };
+		5CAA80F52086D50A00D519DF /* Lab12-AdvancedStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardUITests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardUITests.xctest"; sourceTree = "<absolute>"; };
+		5CAA80F62086F48300D519DF /* CountingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingNavigationController.swift; sourceTree = "<group>"; };
+		5CAA80F82086F4E800D519DF /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		5CD8EBE72084480600CF13E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CD8EBE92084480600CF13E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CD8EBEC2084480600CF13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CD8EBEE2084481300CF13E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD8EBF12084481300CF13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD8EBF32084481300CF13E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CD8EBF82084481300CF13E8 /* Lab12-AdvancedStoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardTests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardTests.xctest"; sourceTree = "<absolute>"; };
-		5CD8EC032084481300CF13E8 /* Lab12-AdvancedStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardUITests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				5CD8EBE72084480600CF13E8 /* AppDelegate.swift */,
-				5CD8EBE92084480600CF13E8 /* ViewController.swift */,
+				5CAA80F62086F48300D519DF /* CountingNavigationController.swift */,
+				5CAA80F82086F4E800D519DF /* GenericViewController.swift */,
 				5CD8EBEB2084480600CF13E8 /* Main.storyboard */,
 				5CD8EBEE2084481300CF13E8 /* Assets.xcassets */,
 				5CD8EBF02084481300CF13E8 /* LaunchScreen.storyboard */,
@@ -105,7 +108,7 @@
 			);
 			name = "Lab12-AdvancedStoryboard";
 			productName = "Lab12-AdvancedStoryboard";
-			productReference = 5CD8EBE42084480600CF13E8 /* Lab12-AdvancedStoryboard.app */;
+			productReference = 5CAA80F32086D50A00D519DF /* Lab12-AdvancedStoryboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5CD8EBF72084481300CF13E8 /* Lab12-AdvancedStoryboardTests */ = {
@@ -123,7 +126,7 @@
 			);
 			name = "Lab12-AdvancedStoryboardTests";
 			productName = "Lab12-AdvancedStoryboardTests";
-			productReference = 5CD8EBF82084481300CF13E8 /* Lab12-AdvancedStoryboardTests.xctest */;
+			productReference = 5CAA80F42086D50A00D519DF /* Lab12-AdvancedStoryboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5CD8EC022084481300CF13E8 /* Lab12-AdvancedStoryboardUITests */ = {
@@ -141,7 +144,7 @@
 			);
 			name = "Lab12-AdvancedStoryboardUITests";
 			productName = "Lab12-AdvancedStoryboardUITests";
-			productReference = 5CD8EC032084481300CF13E8 /* Lab12-AdvancedStoryboardUITests.xctest */;
+			productReference = 5CAA80F52086D50A00D519DF /* Lab12-AdvancedStoryboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD8EBEA2084480600CF13E8 /* ViewController.swift in Sources */,
+				5CAA80F92086F4E800D519DF /* GenericViewController.swift in Sources */,
+				5CAA80F72086F48300D519DF /* CountingNavigationController.swift in Sources */,
 				5CD8EBE82084480600CF13E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
