@@ -9,6 +9,17 @@
 import UIKit
 
 class CountingNavigationController: UINavigationController {
+    
+    @IBOutlet weak var firstNameOutput: UILabel!
+    @IBOutlet weak var middleNameOutput: UILabel!
+    @IBOutlet weak var lastNameOutput: UILabel!
+    
+    @IBOutlet weak var addressOneOutput: UILabel!
+    @IBOutlet weak var addressTwoOutput: UILabel!
+    @IBOutlet weak var cityOutput: UILabel!
+    @IBOutlet weak var emailOutput: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
