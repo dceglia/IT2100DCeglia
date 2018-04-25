@@ -1,25 +1,15 @@
 //
-//  CountingNavigationController.swift
-//  Lab12-AdvancedStoryboard
+//  dataFieldViewController.swift
+//  Lab12attempt2
 //
-//  Created by David Ceglia on 4/17/18.
-//  Copyright © 2018 David Ceglia. All rights reserved.
+//  Created by David Ceglia on 4/24/18.
 //
 
 import UIKit
 
-class CountingNavigationController: UINavigationController {
-
-    @IBOutlet weak var firstNameOutput: UILabel!
-    @IBOutlet weak var middleNameOutput: UILabel!
-    @IBOutlet weak var lastNameOutput: UILabel!
-
-    @IBOutlet weak var addressOneOutput: UILabel!
-    @IBOutlet weak var addressTwoOutput: UILabel!
-    @IBOutlet weak var cityOutput: UILabel!
-    @IBOutlet weak var emailOutput: UILabel!
-
-
+class dataFieldViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -33,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C382AFD2087B1E5002A16F2 /* Lab12-AdvancedStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Lab12-AdvancedStoryboard.app"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboard.app"; sourceTree = "<absolute>"; };
-		5C382AFE2087B1E5002A16F2 /* Lab12-AdvancedStoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardTests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardTests.xctest"; sourceTree = "<absolute>"; };
-		5C382AFF2087B1E5002A16F2 /* Lab12-AdvancedStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardUITests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardUITests.xctest"; sourceTree = "<absolute>"; };
+		5C382B03208E17D5002A16F2 /* Lab12-AdvancedStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Lab12-AdvancedStoryboard.app"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboard.app"; sourceTree = "<absolute>"; };
+		5C382B04208E17D5002A16F2 /* Lab12-AdvancedStoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardTests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardTests.xctest"; sourceTree = "<absolute>"; };
+		5C382B05208E17D5002A16F2 /* Lab12-AdvancedStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Lab12-AdvancedStoryboardUITests.xctest"; path = "/Users/davidceglia/Desktop/IT-2100/IT2100DCeglia/Lab12-AdvancedStoryboard/build/Debug-iphoneos/Lab12-AdvancedStoryboardUITests.xctest"; sourceTree = "<absolute>"; };
 		5CAA80F62086F48300D519DF /* CountingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingNavigationController.swift; sourceTree = "<group>"; };
 		5CAA80F82086F4E800D519DF /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		5CD8EBE72084480600CF13E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			);
 			name = "Lab12-AdvancedStoryboard";
 			productName = "Lab12-AdvancedStoryboard";
-			productReference = 5C382AFD2087B1E5002A16F2 /* Lab12-AdvancedStoryboard.app */;
+			productReference = 5C382B03208E17D5002A16F2 /* Lab12-AdvancedStoryboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5CD8EBF72084481300CF13E8 /* Lab12-AdvancedStoryboardTests */ = {
@@ -126,7 +126,7 @@
 			);
 			name = "Lab12-AdvancedStoryboardTests";
 			productName = "Lab12-AdvancedStoryboardTests";
-			productReference = 5C382AFE2087B1E5002A16F2 /* Lab12-AdvancedStoryboardTests.xctest */;
+			productReference = 5C382B04208E17D5002A16F2 /* Lab12-AdvancedStoryboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5CD8EC022084481300CF13E8 /* Lab12-AdvancedStoryboardUITests */ = {
@@ -144,7 +144,7 @@
 			);
 			name = "Lab12-AdvancedStoryboardUITests";
 			productName = "Lab12-AdvancedStoryboardUITests";
-			productReference = 5C382AFF2087B1E5002A16F2 /* Lab12-AdvancedStoryboardUITests.xctest */;
+			productReference = 5C382B05208E17D5002A16F2 /* Lab12-AdvancedStoryboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

@@ -40,7 +40,8 @@ class GenericViewController: UIViewController {
         let last=(parent as! CountingNavigationController).lastNameOutput
         self.firstNameInput.text = (String(describing: first))
         self.middleNameInput.text = (String(describing: middle))
-        self.lastNameInput.text = (String(describing: last))
+        self.lastNameInput.text  = (String(describing: last))
+        
     }
     
     func updateAddress() {
@@ -48,7 +49,7 @@ class GenericViewController: UIViewController {
         let add2=(parent as! CountingNavigationController).addressTwoOutput
         let city=(parent as! CountingNavigationController).cityOutput
         let email=(parent as! CountingNavigationController).emailOutput
-        self.addressOneInput.text = (String(describing: add1))
+        self.addressOneInput.text = "\(String(describing: add1))"
         self.addressTwoInput.text = (String(describing: add2))
         self.cityInput.text = (String(describing: city))
         self.emailInput.text = (String(describing: email))
@@ -59,7 +60,21 @@ class GenericViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func touchesBegan(_ touches: Set <UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let displayName=(parent as! CountingNavigationController).firstNameOutput
+        firstNameInput.text = String(describing: displayName)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
