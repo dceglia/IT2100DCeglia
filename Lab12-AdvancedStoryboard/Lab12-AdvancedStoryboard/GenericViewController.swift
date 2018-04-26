@@ -10,14 +10,9 @@ import UIKit
 
 class GenericViewController: UIViewController {
 
-    @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var firstNameInput: UITextField!
-    @IBOutlet weak var middleNameLabel: UILabel!
     @IBOutlet weak var middleNameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var scene1Button: UIButton!
-    
     @IBOutlet weak var addressOneInput: UITextField!
     @IBOutlet weak var addressTwoInput: UITextField!
     @IBOutlet weak var cityInput: UITextField!
@@ -35,24 +30,26 @@ class GenericViewController: UIViewController {
     }
     
     func updateNames() {
-        let first=(parent as! CountingNavigationController).firstNameOutput
-        let middle=(parent as! CountingNavigationController).middleNameOutput
-        let last=(parent as! CountingNavigationController).lastNameOutput
-        self.firstNameInput.text = (String(describing: first))
-        self.middleNameInput.text = (String(describing: middle))
-        self.lastNameInput.text  = (String(describing: last))
+//        let first=(parent as! CountingNavigationController).firstNameOutput
+//        let middle=(parent as! CountingNavigationController).middleNameOutput
+//        let last=(parent as! CountingNavigationController).lastNameOutput
+//        self.firstNameInput.text = (String(describing: first))
+//        self.middleNameInput.text = (String(describing: middle))
+//        self.lastNameInput.text  = (String(describing: last))
+        
+        (parent as! CountingNavigationController).firstNameOutput = firstNameInput.text!
+        (parent as! CountingNavigationController).middleNameOutput = middleNameInput.text!
+        (parent as! CountingNavigationController).lastNameOutput = lastNameInput.text!
         
     }
     
     func updateAddress() {
-        let add1=(parent as! CountingNavigationController).addressOneOutput
-        let add2=(parent as! CountingNavigationController).addressTwoOutput
-        let city=(parent as! CountingNavigationController).cityOutput
-        let email=(parent as! CountingNavigationController).emailOutput
-        self.addressOneInput.text = "\(String(describing: add1))"
-        self.addressTwoInput.text = (String(describing: add2))
-        self.cityInput.text = (String(describing: city))
-        self.emailInput.text = (String(describing: email))
+
+        (parent as! CountingNavigationController).addressOneOutput = addressOneInput.text!
+        (parent as! CountingNavigationController).addressTwoOutput = addressTwoInput.text!
+        (parent as! CountingNavigationController).cityOutput = cityInput.text!
+        (parent as! CountingNavigationController).emailOutput = emailInput.text!
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,17 +61,12 @@ class GenericViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let displayName=(parent as! CountingNavigationController).firstNameOutput
-        firstNameInput.text = String(describing: displayName)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
+
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+
     /*
     // MARK: - Navigation
 
