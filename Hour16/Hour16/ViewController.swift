@@ -1,26 +1,15 @@
 //
 //  ViewController.swift
-//  Lab14ReturnMeDCeglia
+//  Hour16
 //
-//  Created by David Ceglia on 5/7/18.
+//  Created by David Ceglia on 6/4/18.
 //  Copyright © 2018 David Ceglia. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let kName:String = "name"
-    let kEmail:String = "email"
-    let kPhone:String = "phone"
-    let kPicture:String = "picture"
-    
-    @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var phone: UILabel!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
